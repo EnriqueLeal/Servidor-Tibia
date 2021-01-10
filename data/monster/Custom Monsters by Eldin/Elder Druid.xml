@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Elder Druid" nameDescription="a Elder Druid" race="blood" experience="20000" speed="12000" manacost="0">
+	<health now="29999" max="29999"/>
+ 	<look type="279" head="91" body="95" legs="95" feet="91" corpse="3128" addons="3"/>
+	<targetchange interval="2000" chance="5"/>
+	<strategy attack="80" defense="10"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag runonhealth="0"/>
+                             <flag skull="red"/>
+	</flags>
+	<attacks>
+		
+		<attack name="holy" interval="4000" chance="100" range="7" min="-350" max="-550">
+			<attribute key="shootEffect" value="holy"/>
+		</attack>
+                           
+	</attacks>
+	<defenses armor="35" defense="50">
+		<defense name="healing" interval="7000" chance="100" min="200" max="200">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+		<defense name="speed" interval="10000" chance="100" speedchange="500" duration="20000">
+			<attribute key="areaEffect" value="greenshimmer"/>
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity physical="0"/>
+		<immunity energy="1"/>
+		<immunity fire="1"/>
+		<immunity poison="1"/>
+		<immunity lifedrain="0"/>
+		<immunity paralyze="5"/>
+		<immunity outfit="1"/>
+		<immunity drunk="1"/>
+		<immunity invisible="0"/>
+	</immunities>
+	<voices interval="4000" chance="100">
+    <voice sentence="Noooob!"/>
+	</voices>
+  
+    
+                             <loot capacity="800">
+                             <item id="2495" countmax="1" chance="13000"/>
+		<item id="2494" countmax="1" chance="600"/>
+		<item id="2520" countmax="2" chance="500"/>
+		<item id="2160" countmax="100" chance="60000"/>
+                             <item id="8918" countmax="1" chance="500"/>
+                             
+	</loot>
+</monster>

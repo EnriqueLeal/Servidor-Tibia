@@ -1,0 +1,130 @@
+----- 03/02/2012 17:24:01 - Mike Shinoda (189.237.8.155) -----
+Comment: 
+Graphic Engine: DirectX5 (0)
+Operating System: Windows XP Professional in ARG
+Processor: Intel Pentium 4 1.80GHZ
+Video Card: Intel (R) 82845
+Last Packet Types: 101 109 104 109 104 109 104 109 160 160
+Last Packet: 109 000 130 214 126 007 002 000 130 213 126 007 101 231 000 000
+Player Position: [33280,32469,7]
+Player Name: Mike Shinoda (Reynosa Tamaulipas Mexico Ser)
+Player Action: 049 056 057 046 049 053 056 046 050 050 051 046 049 051 053 058 055 049 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 8B888F8 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 00000044)
+Fri Feb 03 17:23:30 2012
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 03/02/2012 19:59:27 - Brown (201.132.43.229) -----
+
+Graphic Engine: OpenGL (1)
+Operating System: Windows Vista Home Basic Edition 32 Bit in MEX
+Processor: Intel Pentium DUAL E218
+Video Card: Intel (R) G33/G
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 75 MaW: 1F9BC78 MoW: 0), reason:
+Control.cpp 1693: exception occurred (Type = 75), reason:
+Network.cpp 830: exception occurred, reason:
+Network.cpp 211: assertion failed (CurrentServer = 1819047270), reason:
+CurrentServer<NUMBEROFSERVER
+Fri Feb 03 10:20:05 2012
+Debug Assertion 8.60 Network.cpp 211
+
+----- 03/02/2012 20:49:38 - Aquiles (187.150.123.104) -----
+Comment: 
+Graphic Engine: DirectX5 (0)
+Operating System: Windows XP Professional in ESP
+Processor: Intel Pentium DUAL E216
+Video Card: Intel (R) Q35 E
+Last Packet Types: 180 131 100 108 180 131 100 108 180 131
+Last Packet: 108 111 125 004 125 008 001 100 111 125 002 125 008 000 255 124
+Player Position: [32111,32002,8]
+Player Name: Aquiles (Reynosa Tamaulipas Mexico Ser)
+Player Action: 049 056 057 046 049 053 056 046 050 050 051 046 049 051 053 058 055 049 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 946: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1331: exception occurred (Type = -1) (MainWindow = 149217352), reason:
+Network.cpp 445: exception occurred, reason:
+Network.cpp 432: exception occurred, reason:
+Network.cpp 398: packet size does not fit to symmetric encryption (PacketSize = 15341)
+Fri Feb 03 20:48:50 2012
+Debug Assertion 8.60 Network.cpp 398
+
+----- 04/02/2012 15:31:39 - Comandante Fragoso (189.158.252.87) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Home Premium Edition 64 Bit in USA
+Processor: Dual Core AMD Athlon II P320
+Video Card: ATI Mobility Radeon HD AMD M880G
+Last Packet Types: 109 106 131 180 109 107 160 160 140 109
+Last Packet: 109 064 126 225 125 007 001 064 126 226 125 007 107 064 126 226
+Player Position: [32320,32225,7]
+Player Name: Comandante Fragoso (Reynosa Tamaulipas Mexico Ser)
+Player Action: 049 056 057 046 049 053 056 046 050 050 051 046 049 051 053 058 055 049 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 946: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1331: exception occurred (Type = 109) (MainWindow = 42434560), reason:
+Communication.cpp 2151: exception occurred, reason:
+Communication.cpp 1950: Player object is not where it should be, reason:
+ hx: 8 hy: 6 hz: 0
+ Cylinder (1):  (103,0) (99,1073790709)
+ Cylinder (2):  (103,0) (99,1073790709)(-)(-)(-)(-)(-)(-)(-)(-)
+Sat Feb 04 15:30:59 2012
+Debug Assertion 8.60 Communication.cpp 1950
+
+----- 04/02/2012 18:45:57 - Lady Mistyk (187.131.218.250) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows XP Home Edition in ESP
+Processor: Intel Celeron 2.53GHZ
+Video Card: ATI Radeon XPRESS 20
+Last Packet Types: 109 109 162 162 109 180 109 131 109 109
+Last Packet: 109 197 129 156 123 015 001 197 129 155 123 015 000 000 000 000
+Player Position: [33215,31643,15]
+Player Name: Lady Mistyk (Reynosa Tamaulipas Mexico Ser)
+Player Action: 049 056 057 046 049 053 056 046 050 050 051 046 049 051 053 058 055 049 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 946: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1331: exception occurred (Type = 109) (MainWindow = 47876176), reason:
+Communication.cpp 2151: exception occurred, reason:
+Communication.cpp 2142: MoveCreature has been received for a coordinate where there is no creature anymore [bug0000017], reason:
+ sx: 14 sy: 7 sz: 2
+ Position: 1
+ zx: 14 zy: 6 zz: 2
+ dx: 0 dy: -1 dz: 0
+ abs_sx: 33221 abs_sy: 31644 abs_sz: 15
+ abs_zx: 33221 abs_zy: 31643 abs_zz: 15
+ Start Cylinder (1):  (410,0)
+ Start Cylinder (2):  (410,0)(-)(-)(-)(-)(-)(-)(-)(-)(-)
+ Destination Cylinder (1):  (410,0)
+ Destination Cylinder (2):  (410,0)(-)(-)(-)(-)(-)(-)(-)(-)(-)
+Sat Feb 04 16:45:45 2012
+Debug Assertion 8.60 Communication.cpp 2142
+
+----- 19/06/2014 23:21:33 - [GOD] Sunnade<3' (127.0.0.1) -----
+Comment: 
+Graphic Engine: DirectX5 (0)
+Operating System: Windows 7 Ultimate Edition 32 Bit in COL
+Processor: Intel Atom N570 @ 1.
+Video Card: Intel (R) GRAPH
+Last Packet Types: 200 107 107 106 030 109 106 180 106 030
+Last Packet: 200 010 001 078 068 039 076 000 026 136 000 007 000 067 105 116
+Player Position: [32383,32158,7]
+Player Name: Marguar Fury (holaxDServer!)
+Player Action: 049 056 055 046 049 051 056 046 057 055 046 050 049 057 058 055 049 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 946: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1331: exception occurred (Type = 200) (MainWindow = 4111480), reason:
+Communication.cpp 3113: exception occurred, reason:
+Communication.cpp 3104: assertion failed (AvailableOutfits = 26), reason:
+In(AvailableOutfits,1,AVAILABLE_OUTFITS)
+Thu Jun 19 23:18:45 2014
+Debug Assertion 8.60 Communication.cpp 3104
+

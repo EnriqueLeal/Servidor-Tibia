@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Magebomb" nameDescription="a Magebomber" race="blood" experience="200000" speed="9000" manacost="390">
+  <health now="2900000" max="2900000"/>
+  <look type="279" head="91" body="95" legs="95" feet="91" corpse="6080" addons="3"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="3"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="18"/>
+    <flag skull="red"/>
+  </flags>
+  <attacks>
+    <attack name="death" interval="2000" chance="50" range="7" min="-655" max="-1000">
+      <attribute key="shootEffect" value="suddendeath"/>
+	  <attribute key="areaEffect" value="mortarea"/>
+    </attack>
+	<attack name="ice" interval="2000" chance="50" range="7" min="-450" max="-790">
+		<attribute key="shootEffect" value="smallice"/>
+		<attribute key="areaEffect" value="icetornado"/>
+		</attack>
+  </attacks>
+  <defenses armor="70" defense="73"/>
+  <immunities>
+    <immunity physical="0"/>
+    <immunity energy="0"/>
+    <immunity fire="0"/>
+    <immunity poison="10"/>
+    <immunity lifedrain="0"/>
+    <immunity paralyze="10"/>
+    <immunity outfit="0"/>
+    <immunity drunk="0"/>
+    <immunity invisible="0"/>
+  </immunities>
+  <voices interval="5000" chance="100">
+    <voice sentence="Muere PUUTO!"/>
+    <voice sentence="Noooob!"/> 
+  </voices>
+  
+
+
+<summons maxSummons="5">
+    <summon name="Magebomb" interval="1000" chance="25" max="5"/>
+  </summons>
+
+
+
+  <loot>
+    <item id="2148" countmax="20" chance1="100000" chancemax="0"/>
+    <item id="2465" chance="10000"/>
+    <item id="2461" chance="10000"/>
+    <item id="2649" chance="10000"/>
+    <item id="2671" countmax="2" chance1="20000" chancemax="0"/>
+    <item id="3976" countmax="10" chance1="50000" chancemax="0"/>
+    <item id="1987" chance="100000">
+      <inside>
+        <item id="2456" chance="6666"/>
+        <item id="2544" countmax="15" chance1="10000" chancemax="0"/>
+        <item id="2546" countmax="5" chance1="10000" chancemax="0"/>
+        <item id="2147" countmax="2" chance1="3333" chancemax="0"/>
+        <item id="2675" countmax="4" chance1="6666" chancemax="0"/>
+        <item id="2690" countmax="4" chance1="6666" chancemax="0"/>
+        <item id="2050" chance="20000"/>
+        <item id="2478" chance="3333"/>
+        <item id="2652" chance="2222"/>
+        <item id="2201" chance="2500"/>
+      </inside>
+    </item>
+  </loot>
+</monster>

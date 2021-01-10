@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Sorcerer" nameDescription="a Sorcerer" race="blood" experience="200000" speed="15000" manacost="0">
+	<health now="500000" max="500000"/>
+	<look type="130" head="91" body="95" legs="95" feet="91" corpse="3128" addons="1"/>
+	<targetchange interval="2000" chance="5"/>
+	<strategy attack="80" defense="10"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag runonhealth="0"/>
+                             <flag skull="red"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="40" attack="40"/>
+		<attack name="death" interval="2000" chance="100" range="7" min="-650" max="-995">
+			<attribute key="shootEffect" value="suddendeath"/>
+		</attack>
+		<attack name="fire" interval="5000" chance="80" range="7" radius="2" target="1" min="-550" max="-990">
+			<attribute key="shootEffect" value="holy"/>
+			
+		</attack>
+	</attacks>
+	<defenses armor="45" defense="50">
+		<defense name="healing" interval="4000" chance="100" min="700" max="1100">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+		<defense name="speed" interval="5000" chance="30" speedchange="700" duration="20000">
+			<attribute key="areaEffect" value="redshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+	<element energyPercent="50"/>
+		<element earthPercent="50"/>
+			<element firePercent="50"/>
+				<element icePercent="50"/>
+					<element deathPercent="50"/>
+						<element physicalPercent="50"/>
+	</elements>
+	<immunities>
+		<immunity physical="0"/>
+		<immunity energy="0"/>
+		<immunity fire="0"/>
+		<immunity poison="0"/>
+		<immunity lifedrain="0"/>
+		<immunity paralyze="10"/>
+		<immunity outfit="0"/>
+		<immunity drunk="0"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<summons maxSummons="5">
+		<summon name="fire elemental" interval="3000" chance="50" max="5"/>
+	</summons>
+	<voices interval="5000" chance="100">
+    <voice sentence="JAJAJA,Noooob!" yell="1"/>
+	</voices>
+	<loot capacity="800">
+		<item id="2495" countmax="1" chance="13000"/>
+		<item id="2494" countmax="1" chance="600"/>
+		<item id="2520" countmax="2" chance="500"/>
+		<item id="2160" countmax="100" chance="60000"/>
+                             <item id="8918" countmax="1" chance="500"/>
+	</loot>
+</monster>

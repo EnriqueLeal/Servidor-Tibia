@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mod name="First Items" version="2.0" author="J.Dre" contact="j.dre@live.com" enabled="yes">
+   <config name="firstitems_config"><![CDATA[
+      commonItems = {
+         {itemid=6103, count=1, useMessage=true}, -- a book (or whatever) with a message
+         {itemid=2789, count=10, inContainer = true}, -- 10 brown mushrooms
+         {itemid=2152, count=10, inContainer = true}, -- 10 platinum coins
+         {itemid=2200, count=100}, -- protection amulet
+         {itemid=2643} -- leather boots
+      }
+      firstItems = {
+         { -- Sorcerer   
+            {itemid=1988}, -- backpack
+            {itemid=2175}, -- spellbook
+            {itemid=2190}, -- wand of vortex
+            {itemid=8819}, -- magician's robe
+            {itemid=8820}, -- mage hat
+            {itemid=2468}, -- studded legs
+            {itemid=7620, count=3, inContainer=true} -- mana potion
+         },
+         { -- Druid
+            {itemid=1988}, -- backpack
+            {itemid=2175}, -- spellbook
+            {itemid=2182}, -- snakebite rod
+            {itemid=8819}, -- magician's robe
+            {itemid=8820}, -- mage hat
+            {itemid=2468}, -- studded legs
+            {itemid=7620, count=3, inContainer=true} -- mana potion
+         },
+         { -- Paladin
+            {itemid=1988}, -- backpack
+            {itemid=2456, count=1, useSlot=true, slotType=CONST_SLOT_LEFT}, -- bow
+            {itemid=2544, count=100, useSlot=true, slotType=CONST_SLOT_LAST}, -- 100 arrow's
+            {itemid=2660}, -- ranger's cloak
+            {itemid=2481}, -- soldier helmet
+            {itemid=8923}, -- ranger legs
+            {itemid=7618, count=1, inContainer=true}, -- health potion
+            {itemid=7620, count=2, inContainer=true} -- mana potion
+         },
+         { -- Knight
+            {itemid=1988}, -- backpack
+            {itemid=2509}, -- steel shield
+            {itemid=8602}, -- jagged sword
+            {itemid=8601, inContainer=true}, -- steel axe
+            {itemid=2439, inContainer=true}, -- daramanian mace
+            {itemid=2465}, -- brass armor
+            {itemid=2481}, -- soldier helmet
+            {itemid=2478}, -- brass legs
+            {itemid=7618, count=3, inContainer=true} -- health potion
+         }
+      }
+   ]]></config>
+   <event type="login" name="FirstItems" event="script"><![CDATA[
+      domodlib('firstitems_config')
+ 
+      for _, items in ipairs(firstItems) do
+         for _, item in ipairs(commonItems) do
+            table.insert(items, item)
+         end
+      end
+ 
+      function onLogin(cid)
+         if(getPlayerAccess(cid) < 3 and (getPlayerLastLoginSaved(cid) < 1) and firstItems[getPlayerVocation(cid)]) then
+            for _, v in ipairs(firstItems[getPlayerVocation(cid)]) do
+               if isItemContainer(v.itemid) then
+                  backpack = doPlayerAddItem(cid, v.itemid, 1, false)
+               elseif v.inContainer then
+                  doAddContainerItem(backpack, v.itemid, v.count or 1)
+               elseif v.useSlot then
+                  doPlayerAddItem(cid, v.itemid, v.count, false, v.slotType)
+               elseif v.useMessage then
+                  local t, k = {
+                     writer = "Server Staff", date = os.time(),
+                     text = "Welcome " .. getCreatureName(cid) .. ".\n\nOur community would like to welcome you to " .. getConfigValue('serverName') .. ". If you need help with anything, please refer to the help channel.\n\nEnjoy your time!"
+                  }, doPlayerAddItem(cid, v.itemid, v.count or 1, false)
+                  doSetItemText(k, t.text, t.writer, t.date)
+               else
+                  doPlayerAddItem(cid, v.itemid, v.count or 1)
+               end
+            end
+         end
+ 
+         return true
+      end
+   ]]></event>
+</mod>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<globalevents>
+              <!-- <globalevent name="record" type="record" event="script" value="record.lua"/> -->
+              <globalevent name="save" interval="3600000" event="script" value="save.lua"/>
+              <globalevent name="animatedtexto" interval="5" script="texto.lua"/>
+              <globalevent name="loteria" interval="1200" event="script" value="loteria.lua"/>
+              <globalevent name="clean" interval="7200000" event="script" value="clean.lua"/>
+	<!-- <globalevent name="timer_example" time="21:35:11" event="script" value="my_script.lua"/> -->
+	<globalevent name="information" interval="900000" event="script" value="autobroadcast.lua"/>
+	</globalevents>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Antonio" script="data/npc/scripts/default.lua" walkinterval="1000" floorchange="0">
+    <health now="100" max="100"/>
+    <look type="128" head="96" body="99" legs="76" feet="115" addons="3"/>
+    <parameters>
+		<parameter key="message_greet" value="|PLAYERNAME| !Hoola,Vendo Addon Doll Dime Trade!." />
+        <parameter key="module_keywords" value="1" />
+        <parameter key="keywords" value="hi;smallville;perigos;monstros;trade;turista;bye;" />
+        <parameter key="keyword_reply1" value="|PLAYERNAME| !Hoola,Vendo Addon Doll Dime Trade!." />
+       <parameter key="keyword_reply7" value="Eh melhor ir embora." />
+
+        <parameter key="module_shop" value="1"/>
+        <parameter key="shop_buyable" value="addon doll,9693,15000000;" />
+        <parameter key="shop_sellable" value="demon shield,2520,30000;" />
+        
+   </parameters>
+</npc>
